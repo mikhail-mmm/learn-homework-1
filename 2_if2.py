@@ -16,11 +16,19 @@
 """
 
 def main():
-    """
-    Эта функция вызывается автоматически при запуске скрипта в консоли
-    В ней надо заменить pass на ваш код
-    """
-    pass
-    
+    user_line_1 = input('Введите первую строку: ')
+    user_line_2 = input('Введите вторую строку: ')
+    print(line_verification(user_line_1, user_line_2))
+
+def line_verification(line_1, line_2):
+    if not(isinstance(line_1, str)) or not(isinstance(line_2, str)):
+        return 0
+    elif line_1 == line_2:
+        return 1
+    elif len(line_1) > len(line_2):
+        return 2
+    elif line_2 == 'learn':
+        return 3
+
 if __name__ == "__main__":
     main()
